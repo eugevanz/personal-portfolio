@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaDownload, FaMoon } from "react-icons/fa";
+import { FaMoon } from "react-icons/fa";
 // import Spline from "@splinetool/react-spline";
 import Heading from "./components/Heading";
 import Services from "./components/Services";
@@ -11,7 +11,7 @@ function App() {
   return (
     <div className={darkMode ? "dark" : ""}>
       <section className="bg-white px-10 min-h-screen md:px-10 lg:px-40 dark:bg-gray-900 bg-fixed">
-        <nav className="py-10 mb-12 flex justify-between items-center">
+        {/* <nav className="py-10 mb-12 flex justify-between items-center">
           <h1 className="text-md font-monospace dark:text-gray-300">
             adevnamedgeenas
           </h1>
@@ -32,10 +32,14 @@ function App() {
               </a>
             </li>
           </ul>
-        </nav>
+        </nav> */}
+        <FaMoon
+          className="cursor-pointer text-xl dark:text-gray-300 z-10 absolute top-10 right-10"
+          onClick={() => setDarkMode(!darkMode)}
+        ></FaMoon>
         <Heading></Heading>
-        <Services></Services>
         <Projects></Projects>
+        <Services></Services>
         {/* <Spline scene="https://prod.spline.design/5KnMH-oYFuh1kpaM/scene.splinecode" /> */}
       </section>
     </div>
